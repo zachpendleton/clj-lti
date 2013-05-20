@@ -25,7 +25,8 @@
 
 (deftest encode-params-test
   (testing "Parameter strings"
-    (is (= (encode-params params) param-string))))
+    (is (= (encode-params params) param-string))
+    (is (= (encode-params (clojure.walk/keywordize-keys params)) param-string))))
 
 (deftest base-string-test
   (testing "base-string"

@@ -33,7 +33,7 @@
                 (percent-encode (encode-params params))]))
 
 (defn sign
-  [^String secret ^String subject]
+  [^String secret ^String base]
   (let [signing-key (SecretKeySpec. (.getBytes secret) "HmacSHA1")
         mac (doto (Mac/getInstance "HmacSHA1") (.init signing-key))]
-    (String. (base64/encode (.doFinal mac (.getBytes subject))) "UTF-8")))
+    (String. (base64/encode (.doFinal mac (.getBytes base))) "UTF-8")))
