@@ -1,13 +1,14 @@
 # clj-lti
 
-A Clojure library designed to ... well, that part is up to you.
+Ring middleware designed to make LTI applications easy as '(1 2 3).
 
 ## Usage
 
-FIXME
+clj-lti is under heavy development now, and it's really all that
+usable. Directions on its use are forthcoming.
 
 ## License
 
-Copyright © 2013 FIXME
+Copyright © 2013 Zach Pendleton.
 
 Distributed under the Eclipse Public License, the same as Clojure.
